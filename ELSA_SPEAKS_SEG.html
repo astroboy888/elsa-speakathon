@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELSA Speakathon by HCL Tech SEG Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F2F8FF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #7247e5;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            padding: 20px;
+            margin-top: 60px; /* To account for the fixed navbar */
+            text-align: center;
+        }
+        h1, h2 {
+            color: #005F99;
+        }
+        h3 {
+            color: #7247e5;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #7247e5;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #005F99;
+        }
+        .highlight {
+            color: #7247e5;
+            font-weight: bold;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .competition-details {
+            display: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .competition-category {
+            cursor: pointer;
+            color: #7247e5;
+            font-weight: bold;
+        }
+        .competition-category:hover {
+            color: #005F99;
+        }
+        .prizes {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #555555;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#prizes">Prizes</a>
+        <a href="#details">Details</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container">
+        <h1>ELSA Speakathon</h1>
+        <p><strong>Boost your English with AI-powered precision!</strong></p>
+        <p>
+            <span class="highlight">What is ELSA Speak?</span><br>
+            The smartest AI English pronunciation coach.<br>
+            Pinpoints exact pronunciation errors.<br>
+            Offers real-time, accurate feedback with tips to improve!
+        </p>
+        <div class="section" id="competitions">
+            <h2>Join the ELSA Speakathon!</h2>
+            <p><strong>Organized by HCL Tech's SEG Team</strong><br>Assessment Test & Role Plays</p>
+            <h3>Win in 3 Categories:</h3>
+            <p>
+                🏆 <span class="competition-category" onclick="toggleDetails('quickSpeak')">QuickSpeak Challenge</span> (Fastest Assessment Completion)<br>
+                🏆 <span class="competition-category" onclick="toggleDetails('speakMaster')">SpeakMaster Quiz</span> (Highest Assessment Scores)<br>
+                🏆 <span class="competition-category" onclick="toggleDetails('rolePlay')">RolePlay Royale</span> (Top Role Play Scores)
+            </p>
+            <div id="quickSpeak" class="competition-details">
+                <h4>QuickSpeak Challenge:</h4>
+                <p>This competition is all about speed! Participants will complete pronunciation tests as quickly as possible.</p>
+                <ul>
+                    <li>Round 1: Basic Pronunciation Test (10 minutes)</li>
+                    <li>Round 2: Intermediate Pronunciation Test (10 minutes)</li>
+                    <li>Round 3: Advanced Pronunciation Test (10 minutes)</li>
+                </ul>
+            </div>
+            <div id="speakMaster" class="competition-details">
+                <h4>SpeakMaster Quiz:</h4>
+                <p>Participants will answer questions that test their understanding of English pronunciation and grammar.</p>
+                <ul>
+                    <li>Round 1: Basic Quiz (20 questions, 15 minutes)</li>
+                    <li>Round 2: Intermediate Quiz (20 questions, 15 minutes)</li>
+                    <li>Round 3: Advanced Quiz (20 questions, 15 minutes)</li>
+                </ul>
+            </div>
+            <div id="rolePlay" class="competition-details">
+                <h4>RolePlay Royale:</h4>
+                <p>Participants will engage in role-playing scenarios to demonstrate their pronunciation and speaking skills.</p>
+                <ul>
+                    <li>Round 1: Role Play Scenario 1 (10 minutes)</li>
+                    <li>Round 2: Role Play Scenario 2 (10 minutes)</li>
+                    <li>Round 3: Role Play Scenario 3 (10 minutes)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section prizes" id="prizes">
+            <h3>Prizes:</h3>
+            <p>
+                🥇 First Place: $500 Gift Card + ELSA Pro Subscription for 1 Year<br>
+                🥈 Second Place: $300 Gift Card + ELSA Pro Subscription for 6 Months<br>
+                🥉 Third Place: $200 Gift Card + ELSA Pro Subscription for 3 Months
+            </p>
+        </div>
+        <div class="section" id="details">
+            <h3>Event Details</h3>
+            <p>
+                <strong>Eligibility:</strong> Open to all language learners<br>
+                <strong>Offline Participation:</strong> Limited to 200 participants (first come, first served)<br>
+                <strong>Location:</strong> HCL Sector 126 Campus<br>
+                <strong>Offline Competition Date:</strong> August 5, 2024<br>
+                <strong>Last Day to Register:</strong> July 25, 2024<br>
+                <strong>Event Dates:</strong> August 1 - August 15, 2024<br>
+                <strong>Mode:</strong> Hybrid (Online & Offline)
+            </p>
+        </div>
+        <div class="section" id="contact">
+            <h3>Contact Us</h3>
+            <p>
+                <strong>Email:</strong> seg@hcl.com<br>
+                <strong>Helpline:</strong> +1234567890, +0987654321
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 ELSA Speakathon | <a href="https://www.elsaspeak.com">Visit our website</a>
+    </div>
+</body>
+</html>
